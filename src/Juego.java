@@ -11,18 +11,15 @@ class Juego {
         scanner = new Scanner(System.in);
     }
 
-    public void iniciar() {
-        System.out.println("¡Bienvenido a Sokoban!");
-        while (!tablero.esVictoria()) {
-            tablero.mostrarTablero();
-            System.out.print("Mueve al jugador (W/A/S/D): ");
-            String movimiento = scanner.nextLine().toUpperCase();
+    public char[][] getTablero() {
+        return tablero.getEstadoTablero(); // Añade este método en la clase Tablero para devolver el estado.
+    }
 
-            if (!jugador.mover(movimiento, tablero)) {
-                System.out.println("Movimiento inválido. Intenta nuevamente.");
-            }
-        }
-        tablero.mostrarTablero();
-        System.out.println("¡Felicidades! Has ganado el juego.");
+    public boolean moverJugador(String direccion) {
+        return jugador.mover(direccion, tablero);
+    }
+
+    public boolean esVictoria() {
+        return tablero.esVictoria();
     }
 }

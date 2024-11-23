@@ -22,16 +22,7 @@ class Tablero {
         };
     }
 
-    public void mostrarTablero() {
-        System.out.println("Estado del tablero:");
-        for (char[] fila : tablero) {
-            for (char celda : fila) {
-                System.out.print(celda);
-            }
-            System.out.println();
-        }
-        System.out.println();
-    }
+
 
     public boolean puedeMover(int nuevoX, int nuevoY, int actualX, int actualY) {
         if (tablero[nuevoX][nuevoY] == PARED) return false; // Si el movimiento choca con una pared
@@ -87,5 +78,9 @@ class Tablero {
             }
         }
         return true;
+    }
+
+    public char[][] getEstadoTablero() {
+        return tablero;
     }
 }

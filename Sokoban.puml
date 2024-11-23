@@ -9,6 +9,21 @@ class Juego {
     + Juego()
     + iniciar()
 }
+
+class SokobanGUI{
+    - juego: Juego
+    - ventana: JFrame
+    - panelTablero: JPanel
+    - botones: JButton[][]
+    + SokobanGUI()
+    + inicializarVentana()
+    + actualizarTablero()
+    + obtenerIcono(char)
+    + agregarControles()
+    + moverJugador()
+    + reiniciarJuego()
+
+}
 class Jugador {
     - int x
     - int y
@@ -33,7 +48,8 @@ class Tablero {
     + esVictoria(String)
 }
 
-Sokoban --> Juego
+Sokoban --> SokobanGUI
+SokobanGUI -> Juego
 Juego --> Jugador
 Juego --> Tablero
 Jugador .> Tablero
