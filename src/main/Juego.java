@@ -1,18 +1,20 @@
+package main;
+
 import java.util.Scanner;
 class Juego {
-    private Tablero tablero;
+    private Mapa tablero;
     private Jugador jugador;
     private Scanner scanner;
 
     public Juego() {
-        tablero = new Tablero();
+        tablero = new Mapa();
         jugador = new Jugador(1, 3); // Posición inicial del jugador
         tablero.colocarJugador(jugador);
         scanner = new Scanner(System.in);
     }
 
     public char[][] getTablero() {
-        return tablero.getEstadoTablero(); // Añade este método en la clase Tablero para devolver el estado.
+        return tablero.getEstadoMapa(); // Añade este método en la clase main.Tablero para devolver el estado.
     }
 
     public boolean moverJugador(String direccion) {

@@ -1,4 +1,4 @@
-// Clase: Sokoban
+package main;// Clase: main.Sokoban
 
 // Clase principal del juego
 public class Sokoban {

@@ -1,7 +1,7 @@
+package main;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class SokobanGUI {
     private JFrame ventana;
@@ -15,7 +15,7 @@ public class SokobanGUI {
     }
 
     private void inicializarVentana() {
-        ventana = new JFrame("Sokoban");
+        ventana = new JFrame("main.Sokoban");
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventana.setLayout(new BorderLayout());
 

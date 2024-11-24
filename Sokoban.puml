@@ -3,7 +3,7 @@ class Sokoban {
     + main()
 }
 class Juego {
-    - tablero: Tablero
+    - mapa: Mapa
     - jugador: Jugador
     - scanner: Scanner
     + Juego()
@@ -13,11 +13,11 @@ class Juego {
 class SokobanGUI{
     - juego: Juego
     - ventana: JFrame
-    - panelTablero: JPanel
+    - panelMapa: JPanel
     - botones: JButton[][]
     + SokobanGUI()
     + inicializarVentana()
-    + actualizarTablero()
+    + actualizarMapa()
     + obtenerIcono(char)
     + agregarControles()
     + moverJugador()
@@ -32,8 +32,8 @@ class Jugador {
     + getX()
     + getY()
 }
-class Tablero {
-    - char[][] tablero
+class Mapa {
+    - char[][] mapa
     - char VACIO
     - char PARED
     - char OBJETIVO
@@ -42,15 +42,15 @@ class Tablero {
     - char JUGADOR
     - char JUGADOR_OBJETIVO
     + Tablero()
-    + mostrarTablero()
     + puedeMover()
     + colocarJugador()
+    + getEstadoMapa()
     + esVictoria(String)
 }
 
 Sokoban --> SokobanGUI
 SokobanGUI -> Juego
 Juego --> Jugador
-Juego --> Tablero
-Jugador .> Tablero
+Juego --> Mapa
+Jugador .> Mapa
 @enduml

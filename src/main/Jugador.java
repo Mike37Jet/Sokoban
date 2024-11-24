@@ -1,3 +1,5 @@
+package main;
+
 class Jugador {
     private int x, y;
 
@@ -14,7 +16,7 @@ class Jugador {
         return y;
     }
 
-    public boolean mover(String direccion, Tablero tablero) {
+    public boolean mover(String direccion, Mapa tablero) {
         int nuevoX = x;
         int nuevoY = y;
 
