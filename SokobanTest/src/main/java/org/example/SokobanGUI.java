@@ -34,7 +34,7 @@ public class SokobanGUI {
 
     private void actualizarTablero() {
 
-        char[][] estadoTablero = juego.getTablero(); // Obtener el estado actual del tablero.
+        char[][] estadoTablero = juego.getMapa(); // Obtener el estado actual del tablero.
         panelTablero.removeAll();
         int filas = estadoTablero.length;
         int columnas = estadoTablero[0].length;

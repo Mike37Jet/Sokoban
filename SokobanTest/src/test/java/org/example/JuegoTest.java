@@ -15,7 +15,7 @@ class JuegoTest {
 
     @Test
     void testEstadoInicialTablero() {
-        char[][] estado = juego.getTablero();
+        char[][] estado = juego.getMapa();
         assertNotNull(estado); // El tablero no debe ser nulo
         // Pared izquierda
         assertEquals('#', estado[0][0]);
