@@ -86,11 +86,11 @@ public class Mapa {
         return mapa;
     }
 
-   //public void colocarCaja(int cajaX, int cajaY) {
-   //    mapa[cajaX][cajaY] = CAJA;
-   //}
+   public void colocarCaja(int cajaX, int cajaY) {
+       mapa[cajaX][cajaY] = CAJA;
+   }
 
-   //public char getCelda(int celdaX, int celdaY) {
-   //    return mapa[celdaX][celdaY];
-   //}
+   public char getCelda(int celdaX, int celdaY) {
+       return mapa[celdaX][celdaY];
+   }
 }
