@@ -1,4 +1,4 @@
-package main;
+package org.example;
 
 class Jugador {
     private int x, y;

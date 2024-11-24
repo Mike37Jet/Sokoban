@@ -1,6 +1,6 @@
-package main;
+package org.example;
 
-class Mapa {
+public class Mapa {
     private char[][] mapa;
     private final char VACIO = ' ';
     private final char PARED = '#';
@@ -12,11 +12,11 @@ class Mapa {
 
     public Mapa() {
         mapa = new char[][]{
-                {' ',' ','#','#','#','#','#',' '},
-                {'#','#','#',' ',' ',' ','#',' '},
-                {'#','.','$',' ',' ','$','#',' '},
-                {'#','#','#',' ','$',' ','#',' '},
-                {'#','.','#','#','$',' ','#',' '},
+                {'#','#','#','#','#','#','#','#'},
+                {'#','#','#',' ',' ',' ','#','#'},
+                {'#','.','$',' ',' ','$','#','#'},
+                {'#','#','#',' ','$',' ','#','#'},
+                {'#','.','#','#','$',' ','#','#'},
                 {'#',' ','#',' ','.',' ','#','#'},
                 {'#','$',' ','.','$',' ','.','#'},
                 {'#',' ',' ',' ','.',' ',' ','#'},
@@ -84,5 +84,13 @@ class Mapa {
 
     public char[][] getEstadoMapa() {
         return mapa;
+    }
+
+    public void colocarCaja(int cajaX, int cajaY) {
+        mapa[cajaX][cajaY] = CAJA;
+    }
+
+    public char getCelda(int celdaX, int celdaY) {
+        return mapa[celdaX][celdaY];
     }
 }

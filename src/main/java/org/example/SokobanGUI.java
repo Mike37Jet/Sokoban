@@ -1,4 +1,4 @@
-package main;
+package org.example;
 
 import javax.swing.*;
 import java.awt.*;
@@ -106,13 +106,13 @@ public class SokobanGUI {
         panel.setLayout(new GridLayout(1, 5));
 
         JButton botonArriba = new JButton("↑");
-        botonArriba.addActionListener(e -> moverJugador("W"));
+        botonArriba.addActionListener(e -> procesarMovimientoJugador("W"));
         JButton botonAbajo = new JButton("↓");
-        botonAbajo.addActionListener(e -> moverJugador("S"));
+        botonAbajo.addActionListener(e -> procesarMovimientoJugador("S"));
         JButton botonIzquierda = new JButton("←");
-        botonIzquierda.addActionListener(e -> moverJugador("A"));
+        botonIzquierda.addActionListener(e -> procesarMovimientoJugador("A"));
         JButton botonDerecha = new JButton("→");
-        botonDerecha.addActionListener(e -> moverJugador("D"));
+        botonDerecha.addActionListener(e -> procesarMovimientoJugador("D"));
         JButton botonReiniciar = new JButton("Reiniciar");
         botonReiniciar.addActionListener(e -> reiniciarJuego());
 
@@ -123,7 +123,7 @@ public class SokobanGUI {
         panel.add(botonReiniciar);
     }
 
-    private void moverJugador(String direccion) {
+    private void procesarMovimientoJugador(String direccion) {
         if (!juego.moverJugador(direccion)) {
             JOptionPane.showMessageDialog(ventana, "Movimiento inválido. Intenta nuevamente.");
         }
